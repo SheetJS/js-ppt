@@ -1,18 +1,30 @@
 {
 	"name": "ppt",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "sheetjs",
 	"description": "Pure JS PowerPoint 97-2003 (PPT) Parser",
 	"keywords": [ "ppt", "presentation", "powerpoint", "office" ],
 	"bin": {
 		"ppt": "./bin/ppt.njs"
 	},
-	"main": "ppt.js",
+	"main": "./ppt",
 	"dependencies": {
-		"cfb":"",
-		"codepage":""
+		"codepage":"~1.3.4",
+		"cfb":">=0.10.0",
+		"commander":""
 	},
-	"repository": { "type":"git", "url":"https://github.com/SheetJS/js-ppt.git" },
+	"devDependencies": {
+		"mocha":"",
+		"uglify-js":""
+	},
+	"repository": { "type":"git", "url":"git://github.com/SheetJS/js-ppt.git" },
+	"scripts": {
+	},
+	"config": {
+		"blanket": {
+			"pattern": "ppt.js"
+		}
+	},
 	"bugs": { "url": "https://github.com/SheetJS/js-ppt/issues" },
 	"license": "Apache-2.0",
 	"engines": { "node": ">=0.8" }
