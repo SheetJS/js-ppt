@@ -833,15 +833,15 @@ function process_ppt(ppt, opts) {
 	opts = opts || {};
 
 	/* 2.1.1 Current User Stream */
-	var custream = ppt.find('Current User');
+	var custream = CFB.find(ppt, 'Current User');
 	var cublob = custream.content;
 
 	/* 2.1.2 PowerPoint Document Stream */
-	var pptstream = ppt.find('PowerPoint Document');
+	var pptstream = CFB.find(ppt, 'PowerPoint Document');
 	var pptblob = pptstream.content;
 
 	var cu, uea;
-	
+
 	/* Part 1.1 */
 	recordhopper(cublob, function pptdoc1(R, val, len) {
 		if(cu) throw "unexpected second RT_CurrentUserAtom in Current User stream";
