@@ -7,7 +7,7 @@ if(typeof require !== 'undefined') {
 	if(typeof CFB === 'undefined') CFB = require('cf'+'b');
 	if(typeof cptable === 'undefined') cptable = require('code'+'page');
 }
-var parsenoop = function(blob, length) { throw new Error("n"); };
+var parsenoop = function(blob, length) { /*throw new Error("n");*/ };
 var parsenoop2 = function(blob, length) { blob.l += length; };
 
 /* helper to read arrays of records */
